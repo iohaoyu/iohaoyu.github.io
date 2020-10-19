@@ -1,0 +1,57 @@
+# Menu
+menu:
+  主页: /
+  归档: /archives
+  相册: /gallery
+  标签: /tags
+  关于: /about
+  工具: /links
+  溪若: /love
+  友链: /friend
+  音乐: /music
+rss: false
+
+
+# Miscellaneous
+favicon: /favicon.ico
+brand: /images/hexo.svg
+
+# Ocean Video
+# Because I put videos in multiple formats on the same path, I just labeled the path here.
+ocean:
+  overlay: true
+  path: /images/ocean/
+  brand: /images/hexo-inverted.svg
+
+# Content
+excerpt_link: 阅读全文...
+
+# Tags
+show_count: false
+
+# Toc
+toc: true
+
+# fancybox
+fancybox: true
+
+# Gitalk
+gitalk:
+  enable: true # true
+  clientID: 965f911ed28599f8073a # GitHub Application Client ID
+  clientSecret: c60a7fa7819534373a702ed77ede0cd3a9065351 # Client Secret
+  repo: gitalk-reply-save # Repository name
+  owner: iohaoyu # GitHub ID
+  admin: iohaoyu # GitHub ID
+
+# Valine
+valine:
+  enable: false # true
+  el: 'vcomments'
+  appId: 
+  appKey: 
+  notify: false
+  verify: true
+  avatar: 'mp'
+  pageSize: '10'
+  placeholder: '请输入...' 
