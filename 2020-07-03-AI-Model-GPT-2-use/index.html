@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="博客、记录、分享">
+  
+  
+    <meta name="description" content="记录 | 分享">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    AI语言模型GPT-2初体验 |
+    
+    Haoyu</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-AI-Model-GPT-2-use" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      AI语言模型GPT-2初体验
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020-07-03-AI-Model-GPT-2-use/" class="article-date">
+  <time datetime="2020-07-03T00:02:46.000Z" itemprop="datePublished">2020-07-03</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h2 id="一、拿王者荣耀举例"><a href="#一、拿王者荣耀举例" class="headerlink" title="一、拿王者荣耀举例"></a>一、拿王者荣耀举例</h2><p>下面由我来讲解一下<strong>王者荣耀</strong>这个游戏里的后羿和嫦娥应该怎么操作：</p>
+<a id="more"></a>
+
+<blockquote>
+<p>射手后羿这个英雄对玩家意识要求非常高，但是总归是一个射手，后羿的优势就是二技能和大招是天生的爆发，后羿的大招是后期的关键 ，而嫦娥是真正意义上的单体爆发英雄，她可以增加伤害和续航，她也是后期上的不二人选，其实他们两个都是互补的。</p>
+<p>那么我们怎么选呢？首先我们要弄清楚后羿和嫦娥的定位。</p>
+<p>嫦娥：后羿这英雄在版本之初并不像现在这么冷门，毕竟后羿的大招总是承受一些伤害，嫦娥在后期一技能是非常可怕的存在，不过现在操作难度加大了，后羿更多的时候还是用来当一个坦克来看待。而嫦娥的发育一般都是比较差的，嫦娥是一个典型的单体爆发英雄，但并不是像其他的英雄比如杨戬这种需要团队配合的英雄，嫦娥单体输出，嫦娥的输出方式主要是2技能和大招的爆发，嫦娥可以在被敌方的团控强化之后可以依靠2技能和大招反制对面的后排。</p>
+</blockquote>
+<p>上面这一段，看起来说得头头是道，简直就像是国服第一说的，<strong>然而其实都是由GPT-2这个AI语言模型生成的</strong>。我在加载好模型后，就输入了：</p>
+<blockquote>
+<p>王者荣耀 国服 后羿 嫦娥 射手</p>
+</blockquote>
+<p>然后就生成了下面一段又一段比较有条理的文字： <img src="https://gitee.com/iohaoyu/image_database/raw/master/img/image-20200702211924391.png" alt="image-20200702211924391"></p>
+<h2 id="二、体验指南"><a href="#二、体验指南" class="headerlink" title="二、体验指南"></a>二、体验指南</h2><p>很早就在<strong>量子位</strong>公众号那里知道了这个GPT-2模型，这周发现了有已经训练好的15亿参数版本的中文模型，于是兴冲冲地就去体验了一下。完全免费，只要你能科学上网即可体验！下面梳理一下怎么去体验使用这个模型，其实只需要点两个按钮即可，不过这里说详细一些：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://colab.research.google.com/github/imcaspar/gpt2-ml/blob/master/pretrained_model_demo.ipynb">https://colab.research.google.com/github/imcaspar/gpt2-ml/blob/master/pretrained_model_demo.ipynb</a></p>
+</blockquote>
+<p><img src="https://gitee.com/iohaoyu/image_database/raw/master/img/image-20200702205255646.png" alt="image-20200702205255646"></p>
+<ol>
+<li>点开链接后在①处查看RAM和磁盘状态，如果显示忙碌，则要等一阵子，有些不稳定，显示了图中的两个条形图，则说明准备好了；</li>
+<li>点②处的按钮，下载模型，需要耐心等一会，直到显示③**”Download finished”**。</li>
+<li>在④处，设置生成文本的最小长度以及想要生成几段内容；</li>
+<li>最后，在⑤处点击按钮，耐心等待模型加载，等显示了⑥**”Model loaded”**则可以在框里输入你的目标关键词，稍加等待，即可看到由AI生成的文本。</li>
+</ol>
+<p>注意，<strong>Colab</strong>不稳定，经常掉线。<strong>如果一切顺利，则全程点两次按钮即可；</strong>如果掉线了，等一阵子，然后在①处点击重新连接即可；</p>
+<p>然后尝试了好几种输入，发现其实并不是所有的都能生成比较合理的文本，比如下面这个，我输入了<strong>“口水鸡真好吃！”</strong>，就得到了这样的输出，汗：</p>
+<blockquote>
+<p>Sample, 2  of  3 口水鸡真好吃！只是它又辣又麻又干硬，又太辣太辣太辣太辣！感觉自己是个辣子鸡，好想做的更麻辣一点再香一点~就做些有好有坏的吃货。好吃的地方的小 老板有口水鸡的秘制香辣，安利一家小店：广东早餐马上火！这家火的地方就是火车站的口水鸡，用的也是马蹄大酥。马蹄酥当然好吃，老广都知道它，除了味 道一般，就是它很软，肉少，不好处理。</p>
+<p>在汽车站旁边，可以让路过的大妈帮忙去买两只。特色芝麻糊特好喝！味道也超级特别香浓！还有这种沙茶酱很好吃， 自己在网上找了个图，以前经常点的火锅旁边有家油小当家。推荐的还有下沙的鲜虾口水鸡、油麦菜和脆脆火腿。可以简单的煮一下，不用多煮，解解口水。老 广喜欢拿大酥子用来加工，有叫大肚子酥。还有个花生酱，也非常好吃。吃货们喜欢我再做更多美食教程推荐。这样比较多的人口水鸡才好吃！[SEP]</p>
+</blockquote>
+<p>但这只是GPT-2，GPT-3都已经出来了，随着不断迭代，潜力还是很惊人的。详情可以看下面的文章介绍。</p>
+<h2 id="三、参考链接"><a href="#三、参考链接" class="headerlink" title="三、参考链接"></a>三、参考链接</h2><p><a target="_blank" rel="noopener" href="https://colab.research.google.com/github/imcaspar/gpt2-ml/blob/master/pretrained_model_demo.ipynb">15 亿参数 GPT2 中文预训练模型-需科学上网</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/imcaspar/gpt2-ml">15 亿参数 GPT2 中文预训练模型-需科学上网-Github仓库地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/7W6EejDL2vo7-64G66zJ1A">量子位《有人做出了中文版GPT-2，可用于写小说、诗歌、新闻等；15亿参数版GPT-2被两名研究生复现》</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/m7SUOwpcDtrydGGNQVdXBg">量子位《OpenAI的GPT-3花费了1200万美元，现在放出商用API，人人皆可拿来自动生成文本、编写代码》</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/594VuqKOjO5ZqLEsjKrz0w">量子位《五行代码玩转GPT-2，新加坡高中生开源轻量级GPT-2“客户端”》</a></p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://iohaoyu.com/2020-07-03-AI-Model-GPT-2-use/" data-id="ckga8uuoy00002gux1q0u2o81" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2020-10-01-Redmi-X50/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            家里人多，要买个好电视
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020-07-03-Hexo-Blog-DIY-Record/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Hexo博客踩坑记录</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '965f911ed28599f8073a',
+      clientSecret: 'c60a7fa7819534373a702ed77ede0cd3a9065351',
+      repo: 'gitalk-reply-save',
+      owner: 'iohaoyu',
+      admin: ['iohaoyu'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Haoyu</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Haoyu"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">工具</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/love">溪若</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/friend">友链</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/music">音乐</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+</body>
+</html>

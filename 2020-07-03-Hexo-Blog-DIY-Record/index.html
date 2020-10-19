@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="博客、记录、分享">
+  
+  
+    <meta name="description" content="记录 | 分享">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Hexo博客踩坑记录 |
+    
+    Haoyu</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-Hexo-Blog-DIY-Record" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo博客踩坑记录
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020-07-03-Hexo-Blog-DIY-Record/" class="article-date">
+  <time datetime="2020-07-03T00:02:17.000Z" itemprop="datePublished">2020-07-03</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h3 id="修改代码框和高亮颜色"><a href="#修改代码框和高亮颜色" class="headerlink" title="修改代码框和高亮颜色"></a>修改代码框和高亮颜色</h3><p><code>themes\ocean\source\css\_partial\highlight.styl</code></p>
+<h3 id="新建一个空白page，不受原来的hexo模板影响；"><a href="#新建一个空白page，不受原来的hexo模板影响；" class="headerlink" title="新建一个空白page，不受原来的hexo模板影响；"></a>新建一个空白page，不受原来的hexo模板影响；</h3><p><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002564944">在html文件头加<code>layout: false</code></a></p>
+<h3 id="显示摘要，不显示全文；"><a href="#显示摘要，不显示全文；" class="headerlink" title="显示摘要，不显示全文；"></a>显示摘要，不显示全文；</h3><p>在写 Markdown 的时候自定义摘要文字，正文之前加<code>&lt;!--more--&gt;</code>，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">摘要...</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">正文...</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h3 id="选择一篇文章置顶"><a href="#选择一篇文章置顶" class="headerlink" title="选择一篇文章置顶"></a>选择一篇文章置顶</h3><p>需要安装插件 <a target="_blank" rel="noopener" href="https://github.com/netcan/hexo-generator-index-pin-top">hexo-generator-index-pin-top</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在需要置顶的文章的 Front-matter 区域加上 <code>top: ture</code> ，示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 新增文章置顶</span><br><span class="line">author: zhwangart</span><br><span class="line">date: 2019-07-18 15:45:03</span><br><span class="line">top: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章添加封面图片"><a href="#文章添加封面图片" class="headerlink" title="文章添加封面图片"></a>文章添加封面图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Post name</span><br><span class="line">date: 2019-07-24 22:01:03</span><br><span class="line">photos: [</span><br><span class="line">        [&quot;&#x2F;images&#x2F;相机.jpg&quot;], &#x2F;&#x2F; themes&#x2F;ocean&#x2F;source&#x2F;images目录下</span><br><span class="line">        [&quot;https:&#x2F;&#x2F;tuchong.pstatp.com&#x2F;2716763&#x2F;f&#x2F;531173888.jpg&quot;]</span><br><span class="line">  ]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>在首页只会显示第一张，详情页会按顺序显示这两张</p>
+<h3 id="一篇文章添加多个标签"><a href="#一篇文章添加多个标签" class="headerlink" title="一篇文章添加多个标签"></a>一篇文章添加多个标签</h3><p>比如<code>tags: [&quot;Photo&quot;, &quot;Life&quot;]</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 作品《燕大视觉印象》</span><br><span class="line">date: 2019-02-18 15:11:21</span><br><span class="line">tags: [&quot;Photo&quot;, &quot;Life&quot;]</span><br><span class="line">top: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="往相册页里加图片"><a href="#往相册页里加图片" class="headerlink" title="往相册页里加图片"></a>往相册页里加图片</h3><p>已经新建了一个相册页面，怎么发布照片？写在 markdown 的 Front-matter 区域，注意格式，和markdown里的插入链接有区别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Gallery</span><br><span class="line">albums: [</span><br><span class="line">        [&quot;img_url&quot;,&quot;img_caption&quot;],</span><br><span class="line">        [&quot;img_url&quot;,&quot;img_caption&quot;]</span><br><span class="line">        ]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改右侧导航栏图标"><a href="#修改右侧导航栏图标" class="headerlink" title="修改右侧导航栏图标"></a>修改右侧导航栏图标</h3><p>1.在<a target="_blank" rel="noopener" href="https://feathericons.com/">开源图标feathericons</a>里找到心仪的图标；</p>
+<p>2.通过图标给的英文关键词去<code>themes/ocean/source/css/_feathericon.styl</code>寻找对应的图标编号；</p>
+<p>3.然后去修改<code>./themes/ocean/source/css/_partial/navbar.styl</code>对应的图标编号</p>
+<p>先修改<code>source/css/_partial/navbar.styl</code></p>
+<p>再去修改主题目录下的_config.yml里的menu</p>
+<h3 id="导航栏图表改为在文字左侧"><a href="#导航栏图表改为在文字左侧" class="headerlink" title="导航栏图表改为在文字左侧"></a>导航栏图表改为在文字左侧</h3><p>修改\themes\ocean\source\css_partial\navbar.styl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&amp;.nav-main</span><br><span class="line">      .nav-item-link</span><br><span class="line">        &amp;::before, i.fe</span><br><span class="line">          display block</span><br><span class="line">          line-height 1</span><br><span class="line">        &amp;::before</span><br><span class="line">          font-family &#39;feathericon&#39;</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&amp;.nav-main</span><br><span class="line">  .nav-item-link</span><br><span class="line">    &amp;::before, i.fe</span><br><span class="line">      &#x2F;&#x2F; display block</span><br><span class="line">      line-height 1</span><br><span class="line">      margin-right: 10px;</span><br><span class="line">    &amp;::before</span><br><span class="line">      font-family &#39;feathericon&#39;</span><br></pre></td></tr></table></figure>
+
+<p>如在gitbash编辑里遇到缩进异常，则可以在Sublime txt里打开，在sublimeText的preferences-setting(user)中设置显示空格符号，把<code>“draw_white_space”</code>的属性设置成<code>“all”</code>，就可以在编辑器里看见空格和tab的显示，对tab进行修改就可以了。<a target="_blank" rel="noopener" href="https://blog.csdn.net/soxiuzi/article/details/79313655">参考</a></p>
+<h3 id="修改网站logo"><a href="#修改网站logo" class="headerlink" title="修改网站logo"></a>修改网站logo</h3><p>替换<code>themes\ocean\source\images</code>下的两个svg文件，<code>hexo-inverted.svg</code>和<code>hexo.svg</code>，文件名不要变动；</p>
+<h3 id="添加歌单页"><a href="#添加歌单页" class="headerlink" title="添加歌单页"></a>添加歌单页</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/soul7y/article/details/105768906">参考教程</a></p>
+<p>我这里用的是自己的网易云歌单“我最喜欢的音乐”，怎么获取这个歌单的id？打开手机网易云音乐app，分享这个歌单时选择复制链接，生成的链接是这样的：</p>
+<blockquote>
+<p>分享王浩宇_创建的歌单「我喜欢的音乐」: <a target="_blank" rel="noopener" href="http://music.163.com/playlist/148890665/120047292/?userid=120047292">http://music.163.com/playlist/148890665/120047292/?userid=120047292</a> (来自@网易云音乐)</p>
+</blockquote>
+<p><code>playlist</code>后紧跟的148890665就是需要的歌单id。</p>
+<h3 id="添加网站字数，阅读时间统计"><a href="#添加网站字数，阅读时间统计" class="headerlink" title="添加网站字数，阅读时间统计"></a>添加网站字数，阅读时间统计</h3><h3 id="hexo本地和github不一致"><a href="#hexo本地和github不一致" class="headerlink" title="hexo本地和github不一致"></a>hexo本地和github不一致</h3><p>试试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加网站总字数记录"><a href="#添加网站总字数记录" class="headerlink" title="添加网站总字数记录"></a>添加网站总字数记录</h4><p>在根目录下运行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount –save</span><br></pre></td></tr></table></figure>
+
+<p>在<code>\themes\ocean\_config.yml</code>主题配置文件中加入：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_wordcount:</span></span><br><span class="line">  <span class="attr">item_text:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">wordcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">totalcount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>在<code>\themes\ocean\layout\_partial\footer.ejs</code>文件中，在<code>&lt;ul class=&quot;list-inline&quot;&gt;</code>标签后加入：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;list-inline&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>全站共<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-count&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">totalcount</span>(<span class="attr">site</span>) %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>字<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="添加文章字数统计和预估阅读时间"><a href="#添加文章字数统计和预估阅读时间" class="headerlink" title="添加文章字数统计和预估阅读时间"></a>添加文章字数统计和预估阅读时间</h4><p>在<code>themes/ocean/layout/_partial/article.ejs</code>里的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article-meta&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>(&#x27;<span class="attr">post</span>/<span class="attr">date</span>&#x27;, &#123;<span class="attr">class_name:</span> &#x27;<span class="attr">article-date</span>&#x27;, <span class="attr">date_format:</span> <span class="attr">null</span>&#125;) %&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>(&#x27;<span class="attr">post</span>/<span class="attr">category</span>&#x27;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>中间加上</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;emsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fe fe-bar-chart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-count&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>字</span><br><span class="line"><span class="symbol">&amp;emsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fe fe-clock&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-count&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>分钟</span><br></pre></td></tr></table></figure>
+<p>变成这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article-meta&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>(&#x27;<span class="attr">post</span>/<span class="attr">date</span>&#x27;, &#123;<span class="attr">class_name:</span> &#x27;<span class="attr">article-date</span>&#x27;, <span class="attr">date_format:</span> <span class="attr">null</span>&#125;) %&gt;</span></span><br><span class="line">   <span class="symbol">&amp;emsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fe fe-bar-chart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-count&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>字</span><br><span class="line">   <span class="symbol">&amp;emsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fe fe-clock&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-count&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>分钟</span><br><span class="line">   <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>(&#x27;<span class="attr">post</span>/<span class="attr">category</span>&#x27;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图标从文字上面，放到文字左边；"><a href="#图标从文字上面，放到文字左边；" class="headerlink" title="图标从文字上面，放到文字左边；"></a>图标从文字上面，放到文字左边；</h3><h3 id="hexo系列问题之部署到github时会删掉README文件"><a href="#hexo系列问题之部署到github时会删掉README文件" class="headerlink" title="hexo系列问题之部署到github时会删掉README文件"></a><strong>hexo系列问题之部署到github时会删掉README文件</strong></h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wxl1555/article/details/79291865/">设置skip_render</a></p>
+<h3 id="解决使用hexo-deploy命令之后自定义域名失效的问题"><a href="#解决使用hexo-deploy命令之后自定义域名失效的问题" class="headerlink" title="解决使用hexo deploy命令之后自定义域名失效的问题"></a>解决使用hexo deploy命令之后自定义域名失效的问题</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42893625/article/details/102574242">https://blog.csdn.net/qq_42893625/article/details/102574242</a></p>
+<h3 id="hexo-deploy时重复输入用户名密码的问题"><a href="#hexo-deploy时重复输入用户名密码的问题" class="headerlink" title="hexo deploy时重复输入用户名密码的问题"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f8b6717e1238">hexo deploy时重复输入用户名密码的问题</a></h3><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21402411">github提示Permission denied (publickey)，如何才能解决？</a></p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://zhwangart.github.io/2019/07/02/Ocean-Issues/">关于 Ocean 使用中的问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/visugar/p/6821777.html">hexo从零开始到搭建完整</a></p>
+<p><a target="_blank" rel="noopener" href="http://blog.andus.top/2019/09/30/%E5%9F%BA%E4%BA%8EHexo-Ocean%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">基于Hexo-Ocean主题博客搭建-andus</a></p>
+<p><a target="_blank" rel="noopener" href="https://feathericons.com/">开源图标feathericons</a></p>
+<p><a target="_blank" rel="noopener" href="https://highlightjs.org/">高亮配置文件highlight.js demo</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.sioe.cn/yingyong/yanse-rgb-16/">RGB颜色值与十六进制颜色码转换工具</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhwangart.github.io/">Ocean主题作者的博客</a></p>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><ul>
+<li><p>修改theme下的文件，不需要断开hexo s，直接hexo g就可刷新；</p>
+</li>
+<li><p>修改根目录下的文件，hexo g后还要重新hexo s才能刷新更改；</p>
+</li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://iohaoyu.com/2020-07-03-Hexo-Blog-DIY-Record/" data-id="ckga8uury000s2guxe8s56l1r" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2020-07-03-AI-Model-GPT-2-use/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            AI语言模型GPT-2初体验
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020-06-15-Deal-With-Messy-Browser-Favorites/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">如何应对混乱不堪的浏览器收藏夹?</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '965f911ed28599f8073a',
+      clientSecret: 'c60a7fa7819534373a702ed77ede0cd3a9065351',
+      repo: 'gitalk-reply-save',
+      owner: 'iohaoyu',
+      admin: ['iohaoyu'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Haoyu</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Haoyu"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关于</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">工具</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/love">溪若</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/friend">友链</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/music">音乐</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+</body>
+</html>
