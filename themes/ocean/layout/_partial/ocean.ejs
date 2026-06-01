@@ -6,15 +6,36 @@
       </div>
     <% } %>
     <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
-             poster="<%- theme.ocean.path %>ocean.png" x5-video-player-type="h5">
-        <source src="<%- theme.ocean.path %>ocean.mp4" type="video/mp4">
-        <source src="<%- theme.ocean.path %>ocean.ogv" type="video/ogg">
-        <source src="<%- theme.ocean.path %>ocean.webm" type="video/webm">
+      <video playsinline="" loop="" muted="" preload="none" data-ocean-video
+             poster="<%- theme.ocean.path %>ocean-poster.jpg" x5-video-player-type="h5">
+        <source data-src="<%- theme.ocean.path %>ocean.mp4" type="video/mp4">
         <p>Your user agent does not support the HTML5 Video element.</p>
       </video>
       <div class="video-overlay"></div>
     </div>
+    <script>
+      (function () {
+        var oceanVideo = document.querySelector('[data-ocean-video]');
+        var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var touchDevice = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        var smallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+        if (!oceanVideo || reducedMotion || touchDevice || smallScreen) return;
+
+        window.addEventListener('load', function () {
+          var oceanSources = oceanVideo.querySelectorAll('source[data-src]');
+          oceanSources.forEach(function (source) {
+            source.src = source.dataset.src;
+          });
+          oceanVideo.load();
+          var playPromise = oceanVideo.play();
+          if (playPromise) {
+            playPromise.catch(function (error) {
+              oceanVideo.dataset.playbackError = error.name || 'playback_failed';
+            });
+          }
+        });
+      }());
+    </script>
     <div class="video-inner text-center text-white">
       <h1><a href="<%- url_for() %>"><%= config.title %></a></h1>
       <p><%= config.subtitle %></p>

@@ -1,7 +1,29 @@
 <%- js('/js/jquery-2.0.3.min') %>
 <%- js('/js/jquery.justifiedGallery.min') %>
 <%- js('/js/lazyload.min') %>
-<%- js('/js/busuanzi-2.3.pure.min') %>
+<script>
+  (function () {
+    var hasVisitCounter = document.getElementById('busuanzi_value_site_pv') ||
+      document.getElementById('busuanzi_value_site_uv') ||
+      document.getElementById('busuanzi_value_page_pv');
+    if (!hasVisitCounter) return;
+
+    function loadVisitCounter() {
+      var script = document.createElement('script');
+      script.src = '<%- url_for('/js/busuanzi-2.3.pure.min.js') %>';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(loadVisitCounter, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function () {
+        window.setTimeout(loadVisitCounter, 1000);
+      });
+    }
+  }());
+</script>
 <% if (theme.fancybox){ %>
   <%- js('fancybox/jquery.fancybox.min') %>
 <% } %>

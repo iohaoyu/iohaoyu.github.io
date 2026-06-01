@@ -1,21 +1,70 @@
 <% if (theme.gitalk.enable) { %>
-  <div class="gitalk" id="gitalk-container"></div>
-  <%- css('https://unpkg.com/gitalk/dist/gitalk.css') %>
-  <%- js('https://unpkg.com/gitalk/dist/gitalk.min.js') %>
-  <%- js('https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js') %>
+  <div class="gitalk" id="gitalk-container">
+    <button class="gitalk-load-button" type="button">加载评论</button>
+  </div>
   <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '<%- theme.gitalk.clientID %>',
-      clientSecret: '<%- theme.gitalk.clientSecret %>',
-      repo: '<%- theme.gitalk.repo %>',
-      owner: '<%- theme.gitalk.owner %>',
-      admin: ['<%- theme.gitalk.admin %>'],
-      // id: location.pathname,      // Ensure uniqueness and length less than 50
-      id: md5(location.pathname),
-      distractionFreeMode: false,  // Facebook-like distraction free mode
-      pagerDirection: 'last'
-    })
+    (function () {
+      var gitalkContainer = document.getElementById('gitalk-container');
+      if (!gitalkContainer) return;
 
-  gitalk.render('gitalk-container')
+      function loadStyle(href) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      }
+
+      function loadScript(src, onLoad) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = onLoad;
+        script.onerror = function () {
+          gitalkContainer.innerHTML = '评论加载失败，请稍后再试。';
+        };
+        document.body.appendChild(script);
+      }
+
+      function renderGitalk() {
+        if (gitalkContainer.dataset.loaded) return;
+        gitalkContainer.dataset.loaded = 'true';
+        gitalkContainer.innerHTML = '评论加载中...';
+
+        loadStyle('https://unpkg.com/gitalk/dist/gitalk.css');
+        loadScript('https://unpkg.com/gitalk/dist/gitalk.min.js', function () {
+          loadScript('https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js', function () {
+            if (!window.Gitalk || !window.md5) {
+              gitalkContainer.innerHTML = '评论加载失败，请稍后再试。';
+              return;
+            }
+
+            var gitalk = new Gitalk({
+              clientID: '<%- theme.gitalk.clientID %>',
+              clientSecret: '<%- theme.gitalk.clientSecret %>',
+              repo: '<%- theme.gitalk.repo %>',
+              owner: '<%- theme.gitalk.owner %>',
+              admin: ['<%- theme.gitalk.admin %>'],
+              id: md5(location.pathname),
+              distractionFreeMode: false,
+              pagerDirection: 'last'
+            });
+
+            gitalk.render('gitalk-container');
+          });
+        });
+      }
+
+      gitalkContainer.querySelector('.gitalk-load-button').addEventListener('click', renderGitalk);
+
+      if (window.IntersectionObserver) {
+        var gitalkObserver = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) { return entry.isIntersecting; })) {
+            gitalkObserver.disconnect();
+            renderGitalk();
+          }
+        }, { rootMargin: '240px' });
+        gitalkObserver.observe(gitalkContainer);
+      }
+    }());
   </script>
 <% } %>
