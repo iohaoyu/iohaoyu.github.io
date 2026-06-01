@@ -81,7 +81,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2019-02-18-YSU-Scenery/" data-id="ckga8uus4000y2gux3o5923oa" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2019-02-18-YSU-Scenery/" data-id="cmpv953m5000lc3t570kd8nej" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -113,31 +113,75 @@
                 
                     
                         
-  <div class="gitalk" id="gitalk-container"></div>
-  
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-
-  
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-  
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-
+  <div class="gitalk" id="gitalk-container">
+    <button class="gitalk-load-button" type="button">加载评论</button>
+  </div>
   <script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID: '965f911ed28599f8073a',
-      clientSecret: 'c60a7fa7819534373a702ed77ede0cd3a9065351',
-      repo: 'gitalk-reply-save',
-      owner: 'iohaoyu',
-      admin: ['iohaoyu'],
-      // id: location.pathname,      // Ensure uniqueness and length less than 50
-      id: md5(location.pathname),
-      distractionFreeMode: false,  // Facebook-like distraction free mode
-      pagerDirection: 'last'
-    })
+    (function () {
+      var gitalkContainer = document.getElementById('gitalk-container');
+      if (!gitalkContainer) return;
 
-  gitalk.render('gitalk-container')
+      function loadStyle(href) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      }
+
+      function loadScript(src, onLoad) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = onLoad;
+        script.onerror = function () {
+          gitalkContainer.innerHTML = '评论加载失败，请稍后再试。';
+        };
+        document.body.appendChild(script);
+      }
+
+      function renderGitalk() {
+        if (gitalkContainer.dataset.loaded) return;
+        gitalkContainer.dataset.loaded = 'true';
+        gitalkContainer.innerHTML = '评论加载中...';
+
+        loadStyle('https://unpkg.com/gitalk/dist/gitalk.css');
+        loadScript('https://unpkg.com/gitalk/dist/gitalk.min.js', function () {
+          loadScript('https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js', function () {
+            if (!window.Gitalk || !window.md5) {
+              gitalkContainer.innerHTML = '评论加载失败，请稍后再试。';
+              return;
+            }
+
+            var gitalk = new Gitalk({
+              clientID: '965f911ed28599f8073a',
+              clientSecret: 'c60a7fa7819534373a702ed77ede0cd3a9065351',
+              repo: 'gitalk-reply-save',
+              owner: 'iohaoyu',
+              admin: ['iohaoyu'],
+              id: md5(location.pathname),
+              distractionFreeMode: false,
+              pagerDirection: 'last'
+            });
+
+            gitalk.render('gitalk-container');
+          });
+        });
+      }
+
+      gitalkContainer.querySelector('.gitalk-load-button').addEventListener('click', renderGitalk);
+
+      if (window.IntersectionObserver) {
+        var gitalkObserver = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) { return entry.isIntersecting; })) {
+            gitalkObserver.disconnect();
+            renderGitalk();
+          }
+        }, { rootMargin: '240px' });
+        gitalkObserver.observe(gitalkContainer);
+      }
+    }());
   </script>
+
 
                             
 
@@ -155,7 +199,7 @@
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2020 Haoyu</li>
+      <li>&copy; 2026 Haoyu</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>
@@ -195,10 +239,6 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/links">工具</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/love">溪若</a>
       </li>
     
       <li class="nav-item">
@@ -245,9 +285,29 @@
 
 <script src="/js/lazyload.min.js"></script>
 
+<script>
+  (function () {
+    var hasVisitCounter = document.getElementById('busuanzi_value_site_pv') ||
+      document.getElementById('busuanzi_value_site_uv') ||
+      document.getElementById('busuanzi_value_page_pv');
+    if (!hasVisitCounter) return;
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+    function loadVisitCounter() {
+      var script = document.createElement('script');
+      script.src = '/js/busuanzi-2.3.pure.min.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
 
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(loadVisitCounter, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function () {
+        window.setTimeout(loadVisitCounter, 1000);
+      });
+    }
+  }());
+</script>
 
   
 <script src="/fancybox/jquery.fancybox.min.js"></script>

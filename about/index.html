@@ -63,14 +63,14 @@
                                             
 
                                                 
-                                                                    <p><code>邮箱: </code><a href="mailto:&#x69;&#x6f;&#104;&#x61;&#x6f;&#x79;&#x75;&#x40;&#49;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#x69;&#x6f;&#104;&#x61;&#x6f;&#x79;&#x75;&#x40;&#49;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+                                                                    <p><code>邮箱: </code><a href="mailto:&#x69;&#x6f;&#x68;&#x61;&#x6f;&#121;&#117;&#64;&#x31;&#54;&#x33;&#46;&#99;&#111;&#x6d;">&#x69;&#x6f;&#x68;&#x61;&#x6f;&#121;&#117;&#64;&#x31;&#54;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
 <p><code>微信: </code>iohaoyu</p>
 <p><code>博客: </code><a href="https://iohaoyu.com/">https://iohaoyu.com</a></p>
 
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/about/index.html" data-id="ckga8uusv00152guxduny5r3f" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/about/index.html" data-id="cmpv953lz0002c3t5dus8egj7" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -97,7 +97,7 @@
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2020 Haoyu</li>
+      <li>&copy; 2026 Haoyu</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>
@@ -137,10 +137,6 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/links">工具</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/love">溪若</a>
       </li>
     
       <li class="nav-item">
@@ -187,9 +183,29 @@
 
 <script src="/js/lazyload.min.js"></script>
 
+<script>
+  (function () {
+    var hasVisitCounter = document.getElementById('busuanzi_value_site_pv') ||
+      document.getElementById('busuanzi_value_site_uv') ||
+      document.getElementById('busuanzi_value_page_pv');
+    if (!hasVisitCounter) return;
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+    function loadVisitCounter() {
+      var script = document.createElement('script');
+      script.src = '/js/busuanzi-2.3.pure.min.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
 
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(loadVisitCounter, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function () {
+        window.setTimeout(loadVisitCounter, 1000);
+      });
+    }
+  }());
+</script>
 
   
 <script src="/fancybox/jquery.fancybox.min.js"></script>

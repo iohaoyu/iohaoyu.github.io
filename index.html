@@ -39,15 +39,36 @@
       </div>
     
     <div class="video-media">
-      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
-             poster="/images/ocean/ocean.png" x5-video-player-type="h5">
-        <source src="/images/ocean/ocean.mp4" type="video/mp4">
-        <source src="/images/ocean/ocean.ogv" type="video/ogg">
-        <source src="/images/ocean/ocean.webm" type="video/webm">
+      <video playsinline="" loop="" muted="" preload="none" data-ocean-video
+             poster="/images/ocean/ocean-poster.jpg" x5-video-player-type="h5">
+        <source data-src="/images/ocean/ocean.mp4" type="video/mp4">
         <p>Your user agent does not support the HTML5 Video element.</p>
       </video>
       <div class="video-overlay"></div>
     </div>
+    <script>
+      (function () {
+        var oceanVideo = document.querySelector('[data-ocean-video]');
+        var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var touchDevice = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+        var smallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+        if (!oceanVideo || reducedMotion || touchDevice || smallScreen) return;
+
+        window.addEventListener('load', function () {
+          var oceanSources = oceanVideo.querySelectorAll('source[data-src]');
+          oceanSources.forEach(function (source) {
+            source.src = source.dataset.src;
+          });
+          oceanVideo.load();
+          var playPromise = oceanVideo.play();
+          if (playPromise) {
+            playPromise.catch(function (error) {
+              oceanVideo.dataset.playbackError = error.name || 'playback_failed';
+            });
+          }
+        });
+      }());
+    </script>
     <div class="video-inner text-center text-white">
       <h1><a href="/">Haoyu</a></h1>
       <p>欢迎来到我的庄园</p>
@@ -112,7 +133,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2019-02-18-YSU-Scenery/" data-id="ckga8uus4000y2gux3o5923oa" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2019-02-18-YSU-Scenery/" data-id="cmpv953m5000lc3t570kd8nej" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -178,7 +199,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-10-13-guoqingxiaoju/" data-id="ckggl0iid00071gux8bu695hb" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-10-13-guoqingxiaoju/" data-id="cmpv953m6000qc3t5aogk8886" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -242,7 +263,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-10-01-Redmi-X50/" data-id="ckggkuwrw00031gux1hn3fw50" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-10-01-Redmi-X50/" data-id="cmpv953m4000gc3t57un8b2x9" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -304,7 +325,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-07-03-AI-Model-GPT-2-use/" data-id="ckga8uuoy00002gux1q0u2o81" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-07-03-AI-Model-GPT-2-use/" data-id="cmpv953ly0001c3t5137pcp9a" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -369,7 +390,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-07-03-Hexo-Blog-DIY-Record/" data-id="ckga8uury000s2guxe8s56l1r" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-07-03-Hexo-Blog-DIY-Record/" data-id="cmpv953m4000ec3t5bj1jc01e" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -432,7 +453,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-06-15-Deal-With-Messy-Browser-Favorites/" data-id="ckga8uurm000e2guxf8dnavcp" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-06-15-Deal-With-Messy-Browser-Favorites/" data-id="cmpv953m3000ac3t53oab5pxr" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -496,7 +517,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2020-06-14-Care-Manor/" data-id="ckga8uur800042gux5yk04zq6" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2020-06-14-Care-Manor/" data-id="cmpv953m20006c3t58r36bsfn" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -554,7 +575,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2019-05-12-game/" data-id="ckga8uuro000g2guxa7tb4ac2" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2019-05-12-game/" data-id="cmpv953m6000nc3t5em4078s8" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -616,7 +637,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2019-03-28-Appreciate-Story/" data-id="ckga8uur600032gux7r0gflnu" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2019-03-28-Appreciate-Story/" data-id="cmpv953lz0003c3t50sgiekwt" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -674,7 +695,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://iohaoyu.com/2019-03-25-Data-Structures-And-Algorithms/" data-id="ckga8uurl000d2guxfzuo8mfm" class="article-share-link">
+                                        <a data-url="https://iohaoyu.com/2019-03-25-Data-Structures-And-Algorithms/" data-id="cmpv953m30008c3t5grradzox" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -713,7 +734,7 @@
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2020 Haoyu</li>
+      <li>&copy; 2026 Haoyu</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>Theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>
@@ -753,10 +774,6 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/links">工具</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/love">溪若</a>
       </li>
     
       <li class="nav-item">
@@ -803,9 +820,29 @@
 
 <script src="/js/lazyload.min.js"></script>
 
+<script>
+  (function () {
+    var hasVisitCounter = document.getElementById('busuanzi_value_site_pv') ||
+      document.getElementById('busuanzi_value_site_uv') ||
+      document.getElementById('busuanzi_value_page_pv');
+    if (!hasVisitCounter) return;
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+    function loadVisitCounter() {
+      var script = document.createElement('script');
+      script.src = '/js/busuanzi-2.3.pure.min.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
 
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(loadVisitCounter, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function () {
+        window.setTimeout(loadVisitCounter, 1000);
+      });
+    }
+  }());
+</script>
 
   
 <script src="/fancybox/jquery.fancybox.min.js"></script>

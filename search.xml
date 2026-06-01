@@ -3,7 +3,7 @@
   <entry>
     <title>作品《燕大视觉印象》</title>
     <url>/2019-02-18-YSU-Scenery/</url>
-    <content><![CDATA[<p>在大学的最后一年拍些照，留下一些回忆，培养一下审美。做到持续更新有些麻烦，还是准备留到要毕业时堆在一起更新。预计2019年7月份之前更新完毕。（<a href="https://iambigger.gitbook.io/landscape/">链接</a>)</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>在大学的最后一年拍些照，留下一些回忆，培养一下审美。做到持续更新有些麻烦，还是准备留到要毕业时堆在一起更新。预计2019年7月份之前更新完毕。（<a href="https://iambigger.gitbook.io/landscape/">链接</a>)</p>
 ]]></content>
       <tags>
         <tag>作品</tag>
@@ -13,7 +13,7 @@
   <entry>
     <title>国庆小聚，来去匆匆</title>
     <url>/2020-10-13-guoqingxiaoju/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="Part-I"><a href="#Part-I" class="headerlink" title="Part I"></a>Part I</h2><p>最近看到一个像段子一样的微信朋友圈截图，说是国庆黄金周，有人每天都去参加朋友的婚礼……</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Part-I"><a href="#Part-I" class="headerlink" title="Part I"></a>Part I</h2><p>最近看到一个像段子一样的微信朋友圈截图，说是国庆黄金周，有人每天都去参加朋友的婚礼……</p>
 <p>再感慨这得随多少份子钱时，心想自己和周围的朋友也快了吧。</p>
 <p>几年前就听闻了有初中女同学已经结婚生子了，前段时间震惊地发现——就大学里住对面寝室的同学一毕业就结婚了，现在孩子都要生了……</p>
 <p>这不得不令我感慨，<strong>“林子大了，什么节奏的鸟都有”。</strong></p>
@@ -37,7 +37,7 @@
   <entry>
     <title>家里人多，要买个好电视</title>
     <url>/2020-10-01-Redmi-X50/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>前几天家里的旧电视坏了，节目声音正常，但屏幕一直黑着，于是电视华丽转变成了收音机，向专业人员咨询了一下维修报价后，噗，发现还是买个新的好了。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>前几天家里的旧电视坏了，节目声音正常，但屏幕一直黑着，于是电视华丽转变成了收音机，向专业人员咨询了一下维修报价后，噗，发现还是买个新的好了。</p>
 <p>但可能由于双十一的缘故，最近电视的价格普遍没有处于最低价位，于是就没有马上买，想缓缓。</p>
 <p>在缓缓这几天里，意外发现电视居然肩系着维护家庭成员纽带的作用，在电视坏掉这几天里，家里都变得冷清了许多。</p>
 <a id="more"></a>
@@ -66,7 +66,7 @@
   <entry>
     <title>AI语言模型GPT-2初体验</title>
     <url>/2020-07-03-AI-Model-GPT-2-use/</url>
-    <content><![CDATA[<h2 id="一、拿王者荣耀举例"><a href="#一、拿王者荣耀举例" class="headerlink" title="一、拿王者荣耀举例"></a>一、拿王者荣耀举例</h2><p>下面由我来讲解一下<strong>王者荣耀</strong>这个游戏里的后羿和嫦娥应该怎么操作：</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="一、拿王者荣耀举例"><a href="#一、拿王者荣耀举例" class="headerlink" title="一、拿王者荣耀举例"></a>一、拿王者荣耀举例</h2><p>下面由我来讲解一下<strong>王者荣耀</strong>这个游戏里的后羿和嫦娥应该怎么操作：</p>
 <a id="more"></a>
 
 <blockquote>
@@ -110,7 +110,7 @@
   <entry>
     <title>Hexo博客踩坑记录</title>
     <url>/2020-07-03-Hexo-Blog-DIY-Record/</url>
-    <content><![CDATA[<h3 id="修改代码框和高亮颜色"><a href="#修改代码框和高亮颜色" class="headerlink" title="修改代码框和高亮颜色"></a>修改代码框和高亮颜色</h3><p><code>themes\ocean\source\css\_partial\highlight.styl</code></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="修改代码框和高亮颜色"><a href="#修改代码框和高亮颜色" class="headerlink" title="修改代码框和高亮颜色"></a>修改代码框和高亮颜色</h3><p><code>themes\ocean\source\css\_partial\highlight.styl</code></p>
 <h3 id="新建一个空白page，不受原来的hexo模板影响；"><a href="#新建一个空白page，不受原来的hexo模板影响；" class="headerlink" title="新建一个空白page，不受原来的hexo模板影响；"></a>新建一个空白page，不受原来的hexo模板影响；</h3><p><a href="https://segmentfault.com/q/1010000002564944">在html文件头加<code>layout: false</code></a></p>
 <h3 id="显示摘要，不显示全文；"><a href="#显示摘要，不显示全文；" class="headerlink" title="显示摘要，不显示全文；"></a>显示摘要，不显示全文；</h3><p>在写 Markdown 的时候自定义摘要文字，正文之前加<code>&lt;!--more--&gt;</code>，比如：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">摘要...</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">正文...</span><br></pre></td></tr></table></figure>
@@ -193,7 +193,7 @@
   <entry>
     <title>如何应对混乱不堪的浏览器收藏夹?</title>
     <url>/2020-06-15-Deal-With-Messy-Browser-Favorites/</url>
-    <content><![CDATA[<p>在<a href="https://iohaoyu.com/2020-06-14-Care-Manor/">No-197-重新收拾打理了自己的庄园</a>里，我提到了可以用谷歌浏览器插件<code>Infinity</code>来解决重度电脑使用者很容易面对的浏览器收藏夹混乱的问题。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>在<a href="https://iohaoyu.com/2020-06-14-Care-Manor/">No-197-重新收拾打理了自己的庄园</a>里，我提到了可以用谷歌浏览器插件<code>Infinity</code>来解决重度电脑使用者很容易面对的浏览器收藏夹混乱的问题。</p>
 <p>结果写完第二天我就发现了更方便的方法:</p>
 <a id="more"></a>
 
@@ -220,7 +220,7 @@
   <entry>
     <title>重新收拾打理了自己的庄园</title>
     <url>/2020-06-14-Care-Manor/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p align="center">🍎</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p align="center">🍎</p>
 
 <h4 id="互联网里的庄园"><a href="#互联网里的庄园" class="headerlink" title="互联网里的庄园"></a>互联网里的庄园</h4><p>以前玩过一个游戏叫《逆水寒》，里面有庄园系统，玩家可以在自己的庄园里种种花草，修修水塘。当时记得我是把建筑周围修了一圈泳池赛道，然后在水面上点缀了朵朵荷花，角色不是会轻功水上漂嘛，于是我就绕着自己的庄园冲浪，一圈又一圈，水光潋滟，逍遥自在。</p>
 <a id="more"></a>
@@ -285,7 +285,7 @@
   <entry>
     <title>作品《宝箱之国》</title>
     <url>/2019-05-12-game/</url>
-    <content><![CDATA[<p>最近用Python写了一个赋予日常工作学习生活以游戏色彩的小工具（小游戏）,取名叫《宝箱之国》，第一次做这种事，完成后相当有成就感呀~(<a href="https://github.com/iohaoyu/treasure-box">链接</a>)</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>最近用Python写了一个赋予日常工作学习生活以游戏色彩的小工具（小游戏）,取名叫《宝箱之国》，第一次做这种事，完成后相当有成就感呀~(<a href="https://github.com/iohaoyu/treasure-box">链接</a>)</p>
 ]]></content>
       <tags>
         <tag>作品</tag>
@@ -295,7 +295,7 @@
   <entry>
     <title>作品《KnowStroy》</title>
     <url>/2019-03-28-Appreciate-Story/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
 <p>《故事》：故事赐予我们这样一种机会：去体验我们自己生活以外的生活，置身于千姿百态的世界和时代，去追求、去抗争、去感受我们生存状态的各种不同深度。最后甚至我们可以在里面重新发现自己。</p>
 </blockquote>
 <p>所以或许可以这么说：<strong>大米等主食是身体的养料之一，而故事则是精神的养料之一，是我们人类的刚需。</strong></p>
@@ -309,7 +309,7 @@
   <entry>
     <title>笔记《数据结构与算法》</title>
     <url>/2019-03-25-Data-Structures-And-Algorithms/</url>
-    <content><![CDATA[<p>既然决定了要来到这个行业，就得尽快稳固地基呀。下面的链接里收录有关数据结构与算法的笔记，也是持续更新。<a href="https://data-structure-and-algorithm.gitbook.io/">链接</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>既然决定了要来到这个行业，就得尽快稳固地基呀。下面的链接里收录有关数据结构与算法的笔记，也是持续更新。<a href="https://data-structure-and-algorithm.gitbook.io/">链接</a></p>
 ]]></content>
       <tags>
         <tag>编程</tag>
@@ -319,7 +319,7 @@
   <entry>
     <title>作品《燕大美食日记》</title>
     <url>/2019-03-20-YSU-Food-Diary/</url>
-    <content><![CDATA[<p>为了小时候吹过的牛（大一许下的宏愿：“老夫要吃遍燕大所有食堂。“），临近毕业时开始编写这本《燕大美食日记》（2018年~2019版）。里面主要内容为，将大学里各个餐厅各个店铺的菜都吃一遍，并分别按体验给出评价。目前还在持续更新中，所以内容有待完善优化，一些固定的模板还没有删去，预计将在2019年7月份之前更新完毕。（<a href="https://iambigger.gitbook.io/ysufood/">链接</a>)</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>为了小时候吹过的牛（大一许下的宏愿：“老夫要吃遍燕大所有食堂。“），临近毕业时开始编写这本《燕大美食日记》（2018年~2019版）。里面主要内容为，将大学里各个餐厅各个店铺的菜都吃一遍，并分别按体验给出评价。目前还在持续更新中，所以内容有待完善优化，一些固定的模板还没有删去，预计将在2019年7月份之前更新完毕。（<a href="https://iambigger.gitbook.io/ysufood/">链接</a>)</p>
 ]]></content>
       <tags>
         <tag>作品</tag>
@@ -329,7 +329,7 @@
   <entry>
     <title>作品《OneSentence》</title>
     <url>/2019-02-20-Sentence-Library/</url>
-    <content><![CDATA[<p>我经常在阅读过程中碰到一些打动了我的句子，但由于没有良好的记录习惯以至于这些句子常常与我只有一面之缘，真是令人痛惜。为了避免不断发生这样的悲剧，我开始打造一个金句仓库，里面分门别类地收集那些打动了我的句子，相信也有一些能打动你。这个作品也是持续更新，大概一个月更新一次。（<a href="https://sentence.gitbook.io/onesentence/">链接</a>)</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>我经常在阅读过程中碰到一些打动了我的句子，但由于没有良好的记录习惯以至于这些句子常常与我只有一面之缘，真是令人痛惜。为了避免不断发生这样的悲剧，我开始打造一个金句仓库，里面分门别类地收集那些打动了我的句子，相信也有一些能打动你。这个作品也是持续更新，大概一个月更新一次。（<a href="https://sentence.gitbook.io/onesentence/">链接</a>)</p>
 ]]></content>
       <tags>
         <tag>作品</tag>

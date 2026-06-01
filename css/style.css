@@ -1969,14 +1969,14 @@ a.toc-link {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #f6f8fa;
+  background: #4d4d4c;
   padding: 1.5rem;
   margin: 1.5rem 0;
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
   border-radius: 0.4rem;
   overflow: auto;
-  color: #4d4d4c;
+  color: #f6f8fa;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1993,6 +1993,7 @@ a.toc-link {
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
   border-radius: 0.4rem;
+  color: #dc143c;
 }
 .article-entry pre code {
   background: none;
@@ -2044,7 +2045,7 @@ a.toc-link {
   background: #d6d6d6;
 }
 .article-entry .gist {
-  background: #f6f8fa;
+  background: #4d4d4c;
 }
 .article-entry .gist .gist-file {
   border: none;
@@ -2067,7 +2068,7 @@ a.toc-link {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #f6f8fa;
+  background: #4d4d4c;
   color: #8e908c;
   padding: 0;
   margin-top: 1rem;
@@ -2094,7 +2095,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #f2777a;
+  color: #9c9;
 }
 pre .number,
 pre .preprocessor,
@@ -2115,7 +2116,7 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #9c9;
+  color: #f99157;
 }
 pre .css .hexcolor {
   color: #6cc;
@@ -2156,6 +2157,16 @@ pre .javascript .function {
 .gitalk,
 .markdown-body {
   font-size: 1.4rem !important;
+}
+.gitalk-load-button {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #172d3e;
+  background: #fff;
+  cursor: pointer;
 }
 .gt-container .gt-avatar.gt-comment-avatar img {
   -webkit-border-radius: 50%;
@@ -2331,8 +2342,8 @@ pre .javascript .function {
 }
 .navbar .nav.nav-main .nav-item-link::before,
 .navbar .nav.nav-main .nav-item-link i.fe {
-  display: block;
   line-height: 1;
+  margin-right: 10px;
 }
 .navbar .nav.nav-main .nav-item-link::before {
   font-family: 'feathericon';
@@ -2347,7 +2358,19 @@ pre .javascript .function {
   content: '\f1a9';
 }
 .navbar .nav.nav-main .nav-item:nth-child(4) .nav-item-link::before {
+  content: '\f153';
+}
+.navbar .nav.nav-main .nav-item:nth-child(5) .nav-item-link::before {
   content: '\f174';
+}
+.navbar .nav.nav-main .nav-item:nth-child(6) .nav-item-link::before {
+  content: '\f1a6';
+}
+.navbar .nav.nav-main .nav-item:nth-child(7) .nav-item-link::before {
+  content: '\f15b';
+}
+.navbar .nav.nav-main .nav-item:nth-child(8) .nav-item-link::before {
+  content: '\f175';
 }
 .navbar-bottom {
   position: absolute;
